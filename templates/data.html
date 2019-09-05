@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GST data</title>
+    <style>
+    table, th, td {
+    border: 1px solid black;
+    }
+    </style>
+</head>
+<h1> Get your gst data here </h1>
+<body>
+    <form action="gst_data/" method="post">
+        {% csrf_token %}
+        <input type="text" name="param" required>
+        <input type="Submit" value='search' >
+        <br><br>
+        {{data1}}<br><br>
+            
+    </form>
+    <table style="width:100%">
+  <tr>
+    <th>Flight name</th>
+    <th>Invoice no.</th> 
+    <th>Invoice date</th>
+    <th>Type of invoice</th>
+    <th>PNR</th>
+    <th>Gstin of supplier</th>
+    <th>Gstin of customer</th>
+    <th>Organisation name</th>
+    <th>Origin</th>
+    <th>Destination</th>
+    <th>igst_transport_rate</th>
+    <th>igst_transport_amount</th>
+    <th>igst_airport_rate</th>
+    <th>igst_airport_amount</th>
+
+    <th>cgst_transport_rate</th>
+    <th>cgst_transport_amount</th>
+    <th>cgst_airport_rate</th>
+    <th>cgst_airport_amount</th>
+
+    <th>sgst_transport_rate</th>
+    <th>sgst_transport_amount</th>
+    <th>sgst_airport_rate</th>
+    <th>sgst_airport_amount</th>
+
+    <th>total_gst</th>
+    <th>grand_total</th>
+  </tr>
+  
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  
+</table>
+</body>
+</html>
